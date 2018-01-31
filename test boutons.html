@@ -1,0 +1,89 @@
+<!-- w w  w  .  ja v a 2s .  c o m-->
+<!DOCTYPE html5>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script type="text/javascript">  
+$(document).ready(function(){ 
+    var rep = [];
+    var level = 1;
+
+    $("#myButtons .btn").click(function(){
+        console.log($(this));
+        var test = $(this).context.innerText;
+        if (test == 'BT6') {
+            rep = [];
+        } else {
+            rep.push(test);
+        }
+        console.log(rep + "-" + test);
+        // $(this).button('loading').delay(1000).queue(function(){
+        //     $(this).button('reset');
+        //     $(this).dequeue();
+        // });        
+    });
+    $("#levelbtn .btn").click(function(){
+        var level = $(this).context.attributes[2].nodeValue;
+        
+        switch(level) {
+            case "1":
+                $(".alert").text("Level 1 (default) : 4 colors / 4 positions / No double");
+                break;
+            case "2":
+                $(".alert").text("Level 2 : 5 colors / 4 positions / double");
+                break;
+            case "3":
+                $(".alert").text("Level 3 : 6 colors / 5 positions / No double");
+                break;
+            case "4":
+                $(".alert").text("Level 4 : 7 colors / 5 positions / Double");
+                break;
+            default:
+                $(".alert").text("Level 1 (default) : 4 colors / 4 positions / No double");
+        }
+
+        console.log(level);
+    });
+});   
+</script>
+
+<style type="text/css">
+  .bs-example{
+      margin: 20px;
+    }
+</style>
+
+</head>
+
+<body>
+
+    <div id="myButtons" class="bs-example">
+        <form action="#" autocomplete="off">
+            <button type="button" class="btn btn-default">BT1</button>
+            <button type="button" class="btn btn-primary">BT2</button>
+            <button type="button" class="btn btn-success">BT3</button>
+            <button type="button" class="btn btn-info">BT4</button>
+            <button type="button" class="btn btn-warning">BT5</button>
+            <button type="button" class="btn btn-danger">BT6</button>
+        </form>
+    </div>
+
+    <div id="levelbtn" class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="btn-group mr-2" role="group" aria-label="First group">
+            <button type="button" class="btn btn-secondary" role="1">Level 1</button>
+            <button type="button" class="btn btn-secondary" role="2">Level 2</button>
+            <button type="button" class="btn btn-secondary" role="3">Level 3</button>
+            <button type="button" class="btn btn-secondary" role="4">Level 4</button>
+        </div>
+    </div>
+
+    <div class="alert alert-primary" role="alert">
+      Default Level : 4 colors / 4 positions / No double
+    </div>
+
+
+</body>
+</html>

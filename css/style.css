@@ -1,0 +1,75 @@
+body
+{
+	background-image: url(../images/background.png);
+	font-family: 'Audiowide', cursive;
+}
+
+.container
+{
+	width: 70%;
+	margin: 30px auto;
+	background-color: rgba(120,120,120,0.7);
+	padding: 20px;
+}
+
+section
+{
+	background-color: white;
+}
+
+.btn
+{
+/* 	width: 40px; */
+}
+
+/* Ci-dessous, Définition des pions de couleur */
+.pionBleu
+{
+	background-color: rgb(0,0,255);
+}
+
+.pionRouge
+{
+	background-color: rgb(255,0,0);
+}
+
+.pionJaune
+{
+	background-color: rgb(255, 255, 0);
+}
+
+.pionVert
+{
+	background-color: rgb(0, 128, 0);
+}
+
+.pionOrange
+{
+	background-color: rgb(255,165,0)
+}
+
+.pionMarine
+{
+	background-color: rgb(0,0,139);
+}
+
+.pionRose
+{
+	background-color: rgb(255,192,203);
+}
+
+.pionNoir
+{
+	background-color: rgb(0, 0, 0);
+}
+
+.pionBlanc
+{
+	background-color: rgb(255, 255, 255);
+}
+
+/* Surcharge Couleur Texte pour boutons sombres */
+.pionNoir, .pionVert, .pionMarine, .pionRouge
+{
+	color: rgb(255,255,255);	
+}
